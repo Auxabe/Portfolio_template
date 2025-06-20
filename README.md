@@ -10,7 +10,7 @@ L’objectif de ce document est de présenter l’architecture du projet, les ch
 ## 🌐 Accès au projet
 
 - **Repository GitHub** : [https://github.com/Auxabe/Portfolio_template.git]  
-- **Site en ligne (déployé via Vercel)** : [Auxane: Personal Site]
+- **Site en ligne (déployé via Vercel)** : []https://portfolio-template-one-psi.vercel.app/
 
 ---
 
