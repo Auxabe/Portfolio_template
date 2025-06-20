@@ -63,3 +63,21 @@ L’objectif de ce document est de présenter l’architecture du projet, les ch
    ```bash
    git clone (https://github.com/Auxabe/Portfolio_template.git)
    cd monportfolio
+
+🚀 Déploiement sur Vercel
+Le projet est connecté à Vercel via GitHub.
+Chaque push sur main déclenche automatiquement un déploiement.
+Aucune configuration manuelle nécessaire (Astro détecté automatiquement).
+
+📦 Améliorations possibles
+Ajout d’un CMS headless (ex: Sanity)
+
+Formulaire de contact avec API
+
+Optimisation Lighthouse (score >90)
+
+Multilingue (i18n)
+
+Documentation Astro : https://docs.astro.build
+
+Guide de déploiement Vercel : https://vercel.com/docs
