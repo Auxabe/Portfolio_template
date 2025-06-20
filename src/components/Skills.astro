@@ -3,68 +3,126 @@ import Icon from './Icon.astro';
 ---
 
 <section class="box skills">
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h3>Développer un outil décisionnel</h3>
-		<p></p>
-		
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h4>Traiter des données à des fins décisionnelles</h4>
-	
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h4>Analyser statistiquement les données</h4>
-		
-	</div>
+  <div class="top-button center">
+    <a href="/CV_Auxane_Bikouta.pdf" class="pill-button" download>Télécharger mon CV</a>
+  </div>
 
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h4>Valoriser une production dans un contexte professionne</h4>
+  <div class="skills-wrapper">
+    <h2 class="skills-title">Compétences</h2>
+    <div class="skill-cards">
+      <div class="skill-block">
+        <h3>Langages de Programmation</h3>
+        <div class="tags">
+          <span> Python</span><span> SQL</span><span>R</span><span>JavaScript</span><span>VBA</span><span>Langage M & DAX (Power BI)</span>
+        </div>
+      </div>
 
+      <div class="skill-block">
+        <h3>Librairies</h3>
+        <div class="tags">
+          <span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>Matplotlib</span><span>Seaborn</span><span>Plotly</span><span>RShiny</span>
+        </div>
+      </div>
 
-	</div>
+      <div class="skill-block">
+        <h3>Visualisation & BI</h3>
+        <div class="tags">
+          <span>Power BI</span><span>Tableau</span><span>Excel</span><span>Dataiku</span><span>Jupyter</span><span>Qlik</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <h3>Bases de Données</h3>
+        <div class="tags">
+          <span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>DBeaver</span><span>Neo4J</span><span>MS Access</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <h3>Méthodes & Concepts</h3>
+        <div class="tags">
+          <span>Machine Learning</span><span>Statistiques descriptives</span><span>Systèmes Décisionnels</span><span>Data Mining</span><span>ETL</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <style>
-	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
-	}
+  .top-button.center {
+    justify-content: center;
+  }
 
-	.skills {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
+  .pill-button {
+    background-color: var(--gray-200);
+    color: var(--gray-900);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: var(--text-sm);
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray-400);
+  }
 
-	.skills h2 {
-		font-size: var(--text-lg);
-	}
+  .pill-button:hover {
+    background-color: var(--accent);
+    color: var(--gray-0);
+    transform: scale(1.05);
+    border-color: var(--accent);
+  }
 
-	.skills p {
-		color: var(--gray-400);
-	}
+  .skills-wrapper {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
 
-	@media (min-width: 50em) {
-		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
-		}
+  .skills-title {
+    text-align: center;
+    font-size: var(--text-2xl);
+    margin-bottom: 2rem;
+    color: var(--gray-1000);
+  }
 
-		.skills {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
-		}
+  .skill-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
 
-		.skills h2 {
-			font-size: var(--text-2xl);
-		}
-	}
+  .skill-block {
+    background-color: #f5f7fa;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  .skill-block h3 {
+    margin-bottom: 1rem;
+    color: #2563eb;
+    font-size: var(--text-lg);
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .tags span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #e0e7ff;
+    color: #1e3a8a;
+    padding: 0.4rem 0.75rem;
+    border-radius: 9999px;
+    font-size: var(--text-sm);
+  }
+
+  .icon {
+    width: 1rem;
+    height: 1rem;
+  }
 </style>

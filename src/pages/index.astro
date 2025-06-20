@@ -29,15 +29,17 @@ const projects = (await getCollection('work'))
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
-				<Hero
-					title="Bonjour, c'est Auxane BIKOUTA"
-					tagline="Dans les 2 pages qui suivent je vais presenter les differents projets réalisés au cours de ces deux semestres du BUT2 et le bilan des competences acquises."
-					align="start"
-				>
-					<div class="roles">
-						<Pill> Data analyst</Pill>
-						<Pill> Stactisticienne</Pill>
-						<Pill>bénévole</Pill>
+				<div class="hero-title tagline-justified">
+					<h1>Auxane BIKOUTA</h1>
+					<p class="tagline-justified">
+						Voici un aperçu de ce que j’ai construit pendant mon parcours en BUT Science des Données : des projets concrets, un stage enrichissant et une alternance professionnalisante. Chaque expérience m’a permis de développer des compétences solides en analyse de données, en communication, et en prise d’initiative. Découvrez comment j’ai transformé les chiffres en solutions, et les idées en résultats.
+					</p>
+					<div class="roles nav-buttons">
+						<a href="/Alternance/" class="pill-button">Alternance</a>
+						<a href="/stage/" class="pill-button">Stage</a>
+						<a href="/work/" class="pill-button">Projets Académiques</a>
+						<a href="/Certifications/" class="pill-button">Certifications</a>
+
 					</div>
 				</Hero>
 
@@ -68,7 +70,9 @@ const projects = (await getCollection('work'))
 		align-items: center;
 		gap: 2rem;
 	}
-
+	.last-name {
+		font-weight: bold;
+	}
 	.roles {
 		display: none;
 	}
@@ -139,14 +143,15 @@ const projects = (await getCollection('work'))
 
 	.section-header {
 		justify-self: center;
-		text-align: center;
+		text-align: justify;
 		max-width: 50ch;
-		font-size: var(--text-md);
+		font-size: var(--text-sm);
 		color: var(--gray-300);
 	}
 
 	.section-header h3 {
 		font-size: var(--text-2xl);
+		text-align: justify
 	}
 
 	@media (min-width: 50em) {
@@ -171,7 +176,7 @@ const projects = (await getCollection('work'))
 
 		.with-cta .section-header {
 			justify-self: flex-start;
-			text-align: left;
+			text-align: justify;
 		}
 
 		.gallery {
@@ -190,7 +195,7 @@ const projects = (await getCollection('work'))
 		height: 7rem;
 		justify-content: center;
 		align-items: center;
-		text-align: center;
+		text-align: justify;
 		border: 1px solid var(--gray-800);
 		border-radius: 1.5rem;
 		color: var(--gray-300);
@@ -204,4 +209,48 @@ const projects = (await getCollection('work'))
 			height: 9.5rem;
 		}
 	}
+
+	.tagline-justified {
+		display: block;
+		text-align: justify;
+		font-size: var(--text-lg);
+		line-height: 1.6;
+		margin-top: 0.5rem;
+	}
+	.nav-buttons {
+		display: flex;
+		gap: 0.75rem;
+		margin-top: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.pill-button {
+  background-color: var(--gray-200);
+  color: var(--gray-900);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: var(--text-sm);
+  transition: all 0.3s ease;
+  border: 1px solid var(--gray-400);
+}
+
+.pill-button {
+  background-color: var(--gray-200);
+  color: var(--gray-900);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: var(--text-sm);
+  transition: all 0.3s ease;
+  border: 1px solid var(--gray-400);
+}
+
+.pill-button:hover {
+  background-color: var(--accent);
+  color: var(--gray-0);
+  transform: scale(1.05);
+  border-color: var(--accent);
+}
+
 </style>

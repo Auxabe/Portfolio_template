@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <section class="cert-section">
+    <h1 class="cert-title">Mes Certifications</h1>
+    <div class="cert-carousel">
+      <div class="cert-track">
+        <div class="cert-card">
+          <img src="/assets/Auxane_BIKOUTA.png" alt="Google Analytics" />
+          <p><strong>Certificat Google Analytics</strong><br />Google Analytics</p>
+        </div>
+        <div class="cert-card">
+          <img src="/assets/dtbricks.png" alt="Databricks Certification" />
+          <p><strong>Databricks Lakehouse Fundamentals</strong><br />Certification Databricks</p>
+        </div>
+        <div class="cert-card">
+          <img src="/assets/machineL.png" alt="Machine Learning Certificate" />
+          <p><strong>Machine Learning</strong><br />Formation en ligne certifiante</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .cert-section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .cert-title {
+      text-align: center;
+      font-size: var(--text-3xl);
+      margin-bottom: 2rem;
+      color: var(--gray-900);
+    }
+
+    .cert-carousel {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .cert-track {
+      display: flex;
+      gap: 1.5rem;
+      scroll-snap-align: start;
+    }
+
+    .cert-card {
+      flex: 0 0 85%;
+      scroll-snap-align: center;
+      background-color: #ffffff;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .cert-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cert-card p {
+      font-size: 1.1rem;
+      font-weight: 500;
+      line-height: 1.6;
+      color: #111827;
+    }
+  </style>
+</BaseLayout>

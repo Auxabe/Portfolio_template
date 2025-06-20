@@ -1,0 +1,284 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <section class="stage-wrapper">
+    <div class="stage-header">
+      <div class="logo-background">
+        <img src="/assets/Actibuy.png" alt="Logo Harmonie Mutuelle" class="stage-logo" />
+      </div>
+      <h1 class="page-title">Mon Stage chez Acti’Buy</h1>
+    </div>
+
+    <div class="stage-card">
+      <h2>📍 Contexte</h2>
+      <p>
+      Dans le cadre de ma deuxième année de BUT Science des Données, j’ai effectué un stage de 10 semaines au sein de l’entreprise Acti’Buy, spécialisée dans la gestion des achats et le déstockage.
+      </p>
+      </div>
+      <div class="stage-grid">
+      <div class="stage-card">
+        <h2>🎯Réalisations</h2>
+        <ul>
+          <li>Uniformisation les fichiers clients et fournisseurs</li>
+          <li>Optimisation des relances commerciales avec Excel/VBA et Power BI</li>
+          <li>Mettre en place une stratégie de déstockage efficace sous Excel</li>
+        </ul>
+      </div>
+
+      <div class="stage-card">
+        <h2>🛠️ Outils & Méthodes</h2>
+        <ul>
+          <li>Power BI</li>
+          <li>Excel</li>
+          <li>Power Apps</li>
+          <li>Python</li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="stage-card">
+      <h2>📈 Impact et résultats</h2>
+      <p>
+        Ces réalisations illustrent concrètement comment les données et les outils Power BI peuvent appuyer la stratégie marketing  d'une entreprise.
+      </p>
+      <div class="alt-graph">
+        <div class="image-carousel">
+          <div class="carousel-container">
+            <div class="carousel-slide active">
+              <img src="/assets/actib.png" alt="Suivi formation" />
+              <p class="graph-caption">Visualisation Power BI du suivi de stocks et ventes (données anonymisées pour le respect du RGPD)</p>
+            </div>
+            <div class="carousel-slide">
+              <img src="/assets/actib2.png" alt="Deuxième dashboard" />
+              <p class="graph-caption">2em visualisation Power BI - Analyse des évolutions des marques</p>
+            </div>
+          </div>
+          <button class="carousel-btn prev" onclick="changeSlide(-1)">❮</button>
+          <button class="carousel-btn next" onclick="changeSlide(1)">❯</button>
+          <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .stage-wrapper {
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .stage-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-background {
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .page-title {
+      font-size: var(--text-4xl);
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .stage-logo {
+      max-width: 240px;
+      height: auto;
+    }
+
+    .stage-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .stage-card {
+      background-color: #f9fafb;
+      color: #1f2937;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stage-card h2 {
+      font-size: var(--text-xl);
+      margin-bottom: 0.5rem;
+    }
+
+    .stage-card p,
+    .stage-card ul {
+      font-size: var(--text-base);
+      text-align: justify;
+    }
+
+    .stage-card ul {
+      padding-left: 1.25rem;
+      list-style: disc;
+    }
+
+    .stage-card li {
+      margin-bottom: 0.5rem;
+    }
+
+    .alt-graph {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .alt-graph img {
+      max-width: 100%;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .graph-caption {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-top: 0.5rem;
+    }
+
+    /* Styles du carrousel */
+    .image-carousel {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-slide {
+      display: none;
+      text-align: center;
+    }
+
+    .carousel-slide.active {
+      display: block;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      z-index: 10;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .carousel-dots {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 12px;
+      width: 12px;
+      margin: 0 6px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .dot.active,
+    .dot:hover {
+      background-color: #1f2937;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .carousel-btn {
+        padding: 8px 12px;
+        font-size: 16px;
+      }
+
+      .prev {
+        left: 5px;
+      }
+
+      .next {
+        right: 5px;
+      }
+    }
+  </style>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      let slideIndex = 1;
+
+      window.changeSlide = function(n) {
+        showSlide(slideIndex += n);
+      }
+
+      window.currentSlide = function(n) {
+        showSlide(slideIndex = n);
+      }
+
+      function showSlide(n) {
+        let slides = document.getElementsByClassName("carousel-slide");
+        let dots = document.getElementsByClassName("dot");
+        
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].classList.remove("active");
+        }
+        
+        for (let i = 0; i < dots.length; i++) {
+          dots[i].classList.remove("active");
+        }
+        
+        slides[slideIndex - 1].classList.add("active");
+        dots[slideIndex - 1].classList.add("active");
+      }
+
+      // Auto-play optionnel (décommentez pour activer)
+      // setInterval(() => {
+      //   changeSlide(1);
+      // }, 5000);
+    });
+  </script>
+</BaseLayout>
