@@ -9,7 +9,7 @@ L’objectif de ce document est de présenter l’architecture du projet, les ch
 
 ## 🌐 Accès au projet
 
-- **Repository GitHub** : [lien du dépôt GitHub ici]  
+- **Repository GitHub** : [https://github.com/Auxabe/Portfolio_template.git]  
 - **Site en ligne (déployé via Vercel)** : [lien Vercel ici]
 
 ---
